@@ -1,0 +1,94 @@
+body {
+  background-color: #000;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+#myTopnav {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 0.00001vh;
+}
+#landing-header h1 {
+  color: sandybrown;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;   
+  /*not visible opacitiy is ranging from 0 to 1*/
+  z-index: 0;
+  /*Because the image has a z-index of 0, it will be heading toward us.*/
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(images/img1.jpg); 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(images/img2.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(images/img3.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(images/img4.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(images/img5.jpeg);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+    /*The animation-timing-function specifies the speed curve of an animation.*/
+    /*The speed curve defines the TIME an animation uses to change from one set of CSS styles to another.*/
+    /*The speed curve is used to make the changes smoothly.*/
+    /*ease-in	  The animation has a slow start	*/
+    /*ease-out	The animation has a slow end*/
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}

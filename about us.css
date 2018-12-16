@@ -1,0 +1,31 @@
+body
+{
+    background-color: #300d14;
+     background-image: url("image1.jpg");
+    background-size: cover;
+}
+p{
+    font-family: cursive;
+    
+    font-style: italic;
+    font-size: 25px;
+    border: 1px;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    color: #efe7da;
+}
+h1{
+   font-family: sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    border: 1px;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    color: #efd4a7;    
+    text-align: center;
+    text-decoration: underline;
+} 
+}

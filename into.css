@@ -1,0 +1,13 @@
+body{
+	 background-image: url("book.jpg");
+    background-size: cover;
+}
+.container{
+   
+    text-align: center;
+    padding: 300px;
+}
+.a{
+    color: #211500;
+    
+}

@@ -1,0 +1,79 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 105%;
+  background: white;
+    background-image: url("image1.jpg");
+    background-size: cover;
+}
+
+.header {
+  width: 23.5%;
+  margin: 50px auto 0px;
+  color: white;
+  background: #194da0;
+  text-align: center;
+  border: 1px solid #110003;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 65px;
+    
+}
+form, .content { 
+  width: 30%;
+  height: 80%;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #110003;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.form1 {
+  margin: 10px 0px 10px 0px;
+}
+td {
+  font-size: 20px;
+  display: block;
+  text-align: left;
+  padding-left: 2px;
+  margin-right:8px; 
+  padding-bottom: 12px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+.form1 input {
+  height: 32px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 17px;
+  margin-right:2px; 
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.button {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: #194da0;
+  border: none;
+  border-radius: 5px;
+     text-align: center;
+  margin:0 auto;
+
+}
+ input[type=radio] {
+    border: 0px;
+    width: 35%;
+    height: .5em;
+}
+img.imug {
+    width: 14%;
+    border-radius: 50%;
+}
+.imgcontainer {
+    float:right;
+    
+     padding: 10px;
+}
