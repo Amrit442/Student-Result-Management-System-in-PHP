@@ -15,7 +15,7 @@ session_start();
     <h1>WELCOME ADMIN</h1>
     
     <?php
-     $User=$_SESSION['Name'];
+     $User=$_SESSION['admin'];
     if(!$User)
     {
         header("location:ad-home.php");

@@ -39,7 +39,7 @@ session_start();
             $res=$a->fetchAll(PDO::FETCH_OBJ);
             if($res)
             {
-                $_SESSION['Name']=$User;
+                $_SESSION['admin']=$User;
                 header("location:ad-home.php");
                 
             }else

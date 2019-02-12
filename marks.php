@@ -19,6 +19,7 @@ session_start();
     
        </div>
             <div class="container">
+              <div id="printableArea">
             <div class="jumbotron">
                 <button type="button" class="btn btn-secondary btn-lg active btn-block">BMSIT RESULT</button>
             <br>
@@ -150,16 +151,30 @@ session_start();
                 </div>
                 <br><br><br><br>
                 <a href="user.php" type="submit" class="btn btn-secondary btn-lg btn-block">BACK</a>
-                <a href="#" type="submit" class="btn btn-secondary btn-lg btn-block">PRINT</a>
+                <!-- <a href="#" type="submit" class="btn btn-secondary btn-lg btn-block">PRINT</a> -->
+                <input type="button" class="btn btn-secondary btn-lg btn-block" onclick="printDiv('printableArea')" value="PRINT" />
 
 
             </div>
-           </div>  
+           </div> 
+           </div> 
                 <div id="footer">
   <div class="container text-center">
     <p>&copy; 2018 Student Result Management System . Design by Amrit Raj</p>
   </div>
 </div>
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
     </body>
 </html>
 

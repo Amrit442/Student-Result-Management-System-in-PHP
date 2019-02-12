@@ -1,6 +1,10 @@
 <?php
 include('conn.php');
 session_start();
+$admin=$_SESSION['admin'];
+  if(!(isset($_SESSION['admin']))){
+header("location:admin.php");
+}
 ?>
 <html>
     <head>
@@ -40,12 +44,9 @@ session_start();
                         </thead>
                     <?php
                     $a=$db->query("SELECT * FROM student");
-                    $k=0;
                     while($f=$a->fetch(PDO::FETCH_OBJ))
                     {
-                        $k++;
                       ?>
-                    <form action="showusn.php" method="post">
                    
                     <tbody>
                     <tr data-id='$id'>
@@ -56,32 +57,14 @@ session_start();
                         <td class="mid"><?=$f->phone; ?></td>
                         <td scope="row"><?=$f->gender; ?></td>
                         <td class="mid"><?=$f->dob; ?></td>
-                         <td class="mid"><input type="submit" class="btn btn-danger btn-xs" value="delete" name="delete<?php echo $k; ?>"></td>
-                         <td class="mid"><a class="btn btn-warning btn-xs" href="editusn.php">Edit</a></td>
+                          <td><a href="delete.php?id=<?=$f->usn; ?>" class="btn btn-danger">Delete</a></td>
+                         <td><a href="editusn.php?id=<?=$f->usn; ?>" class="btn btn-primary">Edit</a></td>
                     </tr>
-                    <?PHP
-                        
-                        $usn_delete=$f->usn;
-//                        echo $usn_delete;
-                        if(isset($_POST['delete'.$k])){
-                            $b=$db->query("DELETE FROM student where usn='$usn_delete'");
-                if($b)
-                {
-//                    echo "<script>alert('Entry deleted')</script>";
-                    header("location: showusn.php");
-                }
-                else
-                {
-                    echo "<script>alert('Enter correct user')</script>";
-                }
-                            
-                        }
-                       
-                    }
-                    ?>
+                 
                     </tbody>
-                         </form>
+                     <?php } ?>   
                 </table>
+            
                 </div>
             </center>
             

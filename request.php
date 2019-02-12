@@ -1,6 +1,10 @@
 <?php
 include('conn.php');
 session_start();
+$Name=$_SESSION['Name'];
+  if(!(isset($_SESSION['Name']))){
+header("location:admin.php");
+}
 ?>
 <html>
     <head>
